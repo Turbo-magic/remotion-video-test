@@ -13,7 +13,7 @@ const container: React.CSSProperties = {
 export const Main = ({ title }: z.infer<typeof CompositionProps>) => {
   return (
     <AbsoluteFill style={container}>
-      <Video src="https://dqu1p08d61fh.cloudfront.net/1b64b0ff-1e4a-483a-9f27-9c7583919d4d/38cf03f1-cd31-4c05-a06a-e5fbbab59751/img4397mov-compressed.mp4#t=0,8.73" />
+      <Video src="https://dqu1p08d61fh.cloudfront.net/a35f0a48-32c0-42e8-adff-ff6a7b5e020f/160a24e3-081a-4f12-a042-6f75b092af3f/imans-strangest-habit-1-compressed.mp4#t=0,37.9" />
     </AbsoluteFill>
   );
 };

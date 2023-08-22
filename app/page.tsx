@@ -19,7 +19,6 @@ import { Spacing } from "../components/Spacing";
 
 const container: React.CSSProperties = {
   maxWidth: 768,
-  margin: "auto",
   marginBottom: 20,
 };
 
@@ -49,6 +48,13 @@ const Home: NextPage = () => {
     <div>
       <div style={container}>
         <div className="cinematics" style={outer}>
+          <h1
+            style={{
+              color: "white",
+            }}
+          >
+            Remotion video player
+          </h1>
           <Player
             component={Main}
             inputProps={inputProps}
@@ -59,6 +65,13 @@ const Home: NextPage = () => {
             style={player}
             controls
           />
+          <h1
+            style={{
+              color: "white",
+            }}
+          >
+            HTML5 VIDEO without remotion
+          </h1>
         </div>
       </div>
     </div>

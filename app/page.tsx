@@ -65,13 +65,6 @@ const Home: NextPage = () => {
             style={player}
             controls
           />
-          <h1
-            style={{
-              color: "white",
-            }}
-          >
-            HTML5 VIDEO without remotion
-          </h1>
         </div>
       </div>
     </div>

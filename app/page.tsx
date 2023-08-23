@@ -19,7 +19,6 @@ import { Spacing } from "../components/Spacing";
 
 const container: React.CSSProperties = {
   maxWidth: 768,
-  margin: "auto",
   marginBottom: 20,
 };
 
@@ -33,6 +32,7 @@ const outer: React.CSSProperties = {
 
 const player: React.CSSProperties = {
   width: "100%",
+  maxWidth: "400px",
 };
 
 const Home: NextPage = () => {
@@ -48,6 +48,13 @@ const Home: NextPage = () => {
     <div>
       <div style={container}>
         <div className="cinematics" style={outer}>
+          <h1
+            style={{
+              color: "white",
+            }}
+          >
+            Remotion video player
+          </h1>
           <Player
             component={Main}
             inputProps={inputProps}
@@ -57,20 +64,8 @@ const Home: NextPage = () => {
             compositionWidth={VIDEO_WIDTH}
             style={player}
             controls
-            autoPlay
-            loop
           />
         </div>
-        <RenderControls
-          text={text}
-          setText={setText}
-          inputProps={inputProps}
-        ></RenderControls>
-        <Spacing></Spacing>
-        <Spacing></Spacing>
-        <Spacing></Spacing>
-        <Spacing></Spacing>
-        <Tips></Tips>
       </div>
     </div>
   );

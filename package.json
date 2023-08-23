@@ -12,17 +12,18 @@
     "deploy": "node deploy.mjs"
   },
   "dependencies": {
-    "@remotion/bundler": "^4.0.19",
-    "@remotion/cli": "^4.0.19",
-    "@remotion/google-fonts": "^4.0.19",
-    "@remotion/lambda": "^4.0.19",
-    "@remotion/paths": "^4.0.19",
-    "@remotion/player": "^4.0.19",
-    "@remotion/shapes": "^4.0.19",
+    "@remotion/cli": "^4.0.22",
+    "@remotion/google-fonts": "^4.0.22",
+    "@remotion/lambda": "^4.0.22",
+    "@remotion/lottie": "^4.0.22",
+    "@remotion/media-utils": "^4.0.22",
+    "@remotion/player": "^4.0.22",
+    "@remotion/preload": "^4.0.22",
+    "@remotion/bundler": "^4.0.22",
     "next": "^13.4.13",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "remotion": "^4.0.19",
+    "remotion": "^4.0.22",
     "zod": "^3.21.4"
   },
   "devDependencies": {

@@ -1,17 +1,8 @@
 import { z } from "zod";
-import {
-  AbsoluteFill,
-  Sequence,
-  spring,
-  useCurrentFrame,
-  useVideoConfig,
-} from "remotion";
+import { AbsoluteFill, Video } from "remotion";
 import { CompositionProps } from "../../types/constants";
-import { NextLogo } from "./NextLogo";
-import { loadFont, fontFamily } from "@remotion/google-fonts/Inter";
-import React, { useMemo } from "react";
-import { Rings } from "./Rings";
-import { TextFade } from "./TextFade";
+import { loadFont } from "@remotion/google-fonts/Inter";
+import React from "react";
 
 loadFont();
 
@@ -19,45 +10,10 @@ const container: React.CSSProperties = {
   backgroundColor: "white",
 };
 
-const logo: React.CSSProperties = {
-  justifyContent: "center",
-  alignItems: "center",
-};
-
 export const Main = ({ title }: z.infer<typeof CompositionProps>) => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-
-  const transitionStart = 2 * fps;
-  const transitionDuration = 1 * fps;
-
-  const logoOut = spring({
-    fps,
-    frame,
-    config: {
-      damping: 200,
-    },
-    durationInFrames: transitionDuration,
-    delay: transitionStart,
-  });
-
-  const titleStyle: React.CSSProperties = useMemo(() => {
-    return { fontFamily, fontSize: 70 };
-  }, []);
-
   return (
     <AbsoluteFill style={container}>
-      <Sequence durationInFrames={transitionStart + transitionDuration}>
-        <Rings outProgress={logoOut}></Rings>
-        <AbsoluteFill style={logo}>
-          <NextLogo outProgress={logoOut}></NextLogo>
-        </AbsoluteFill>
-      </Sequence>
-      <Sequence from={transitionStart + transitionDuration / 2}>
-        <TextFade>
-          <h1 style={titleStyle}>{title}</h1>
-        </TextFade>
-      </Sequence>
+      <Video src="https://dqu1p08d61fh.cloudfront.net/a35f0a48-32c0-42e8-adff-ff6a7b5e020f/160a24e3-081a-4f12-a042-6f75b092af3f/imans-strangest-habit-1-compressed.mp4#t=0,37.9" />
     </AbsoluteFill>
   );
 };
